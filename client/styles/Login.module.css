@@ -1,0 +1,93 @@
+.container {
+  display: flex;
+}
+.left {
+  flex: 4;
+  padding: 20px 10px;
+  border-right: 1px solid lightgray;
+}
+.right {
+  flex: 2;
+}
+.text {
+  margin-left: 10px;
+  font-size: 14px;
+  color: green;
+  font-weight: bold;
+}
+.title {
+  color: green;
+  font-size: 24px;
+  text-align: center;
+}
+.subtitle {
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+}
+.subscribe {
+  margin: 20px 0;
+  text-align: center;
+  font-size: 14px;
+}
+.subscriptionContainer {
+  display: flex;
+
+  line-height: 3;
+  flex-direction: column;
+}
+.subscriptionType {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.headerText {
+  font-size: 16px;
+  color: green;
+  font-weight: bold;
+  text-align: left;
+}
+
+.basic {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.right {
+  padding: 10px;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+}
+.input {
+  margin: 10px;
+  height: 30px;
+  padding: 5px;
+}
+.button {
+  width: fit-content;
+  padding: 10px;
+  background-color: green;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+.xmark {
+  background-color: red;
+
+  border-radius: 50%;
+  padding: 2px 5px;
+}
+.xmark :first-child {
+  color: white;
+}
+
+.checkMark :first-child {
+  color: green;
+  font-weight: bold;
+  font-size: 18px;
+}

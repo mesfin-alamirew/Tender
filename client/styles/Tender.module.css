@@ -1,0 +1,105 @@
+.main {
+  display: flex;
+  height: 100vh;
+}
+.category {
+  flex: 3;
+  border: 1px solid rgb(224, 217, 217);
+}
+.category > h1 {
+  padding: 5px;
+  border-bottom: 1px solid rgb(224, 217, 217);
+  color: #5f9f34;
+  font-weight: bold;
+  font-size: 20px;
+}
+.catItem {
+  list-style: none;
+  border-bottom: 1px solid rgb(224, 217, 217);
+  padding: 5px;
+  font-weight: bold;
+  color: rgb(3, 3, 95);
+
+  cursor: pointer;
+}
+.catIcon {
+  margin: 0 5px;
+  color: rgb(3, 3, 95);
+}
+.share h1 {
+  padding: 10px;
+}
+.shareInput input {
+  margin-left: 10px;
+  width: 85%;
+}
+.shareInput button {
+  margin-left: 45%;
+  padding: 5px;
+}
+.shareLink {
+  display: flex;
+}
+.shareLink button {
+  width: fit-content;
+  margin: 5px;
+  padding: 0 8px;
+  background-color: rgb(22, 7, 245);
+  color: #fff;
+}
+.shareLink button > i {
+  color: #fff;
+  margin-right: 3px;
+}
+.shareInput p {
+  color: #5f9f34;
+  margin-left: 10px;
+}
+.contentContainer {
+  flex: 9;
+}
+.searchContainer {
+  padding: 5px;
+}
+.searchContainer > h1 {
+  padding: 2px 0;
+  margin-left: 15px;
+  color: #5f9f34;
+  font-weight: bold;
+  font-size: 20px;
+}
+.searchControl {
+  padding: 5px;
+
+  border-bottom: 1px solid rgb(224, 217, 217);
+}
+.searchControl > button > i {
+  color: #fff;
+}
+.searchControl > button {
+  background-color: #5f9f34;
+  border: 1px solid #5f9f34;
+  border-radius: 2px;
+  color: #fff;
+  padding: 2px;
+}
+.content {
+  display: flex;
+  padding: 15px;
+  width: 100%;
+}
+.title {
+  text-decoration: underline;
+  color: rgb(3, 3, 95);
+  cursor: pointer;
+  font-weight: bold;
+}
+.sNumber {
+  margin-right: 10px;
+}
+.list {
+  width: 100%;
+}
+.info {
+  margin: 10px 0;
+}
