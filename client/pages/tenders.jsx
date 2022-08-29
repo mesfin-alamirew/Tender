@@ -1,12 +1,9 @@
 import styles from '../styles/Tender.module.css';
 import Link from 'next/link';
-import useFetch from '../hooks/useFetch';
-import { useContext } from 'react';
-import { AuthContext } from '../context/AuthContext';
+import axios from 'axios';
+import dbConnect from '../util/mongo';
 //import Data from '../public/data';
-const tender = () => {
-  const { data, loading, error } = useFetch('/posts');
-  const { user } = useContext(AuthContext);
+const tender = ({ data }) => {
   return (
     <div className={styles.container}>
       <main className={styles.main}>
@@ -228,29 +225,37 @@ const tender = () => {
               </button>
             </div>
           </div>
-          {loading
+          {/* {loading
             ? ' Loading please wait'
-            : data.map((t, i) => (
-                <>
-                  <div className={styles.content} key={i}>
-                    <span className={styles.sNumber}>{i + 1}</span>
-                    <div className={styles.list}>
-                      <Link href={!user ? '/login' : '/detail'}>
-                        <a className={styles.title}>{t.title}</a>
-                      </Link>
-                      <p className={styles.info}>
-                        Category: {t.categories.map((c) => c + ', ')}
-                      </p>
-                      <p className={styles.hour}>Posted: 1 hr ago</p>
-                      <p className={styles.deadline}>Deadline: {t.deadline}</p>
-                    </div>
-                  </div>
-                </>
-              ))}
+            :  */}
+          {data.map((t, i) => (
+            <>
+              <div className={styles.content} key={i}>
+                <span className={styles.sNumber}>{i + 1}</span>
+                <div className={styles.list}>
+                  <Link href={`/tender/${t._id}`}>
+                    <a className={styles.title}>{t.title}</a>
+                  </Link>
+                  <p className={styles.info}>
+                    Category: {t.categories.map((c) => c + ', ')}
+                  </p>
+                  <p className={styles.hour}>Posted: 1 hr ago</p>
+                  <p className={styles.deadline}>Deadline: {t.deadline}</p>
+                </div>
+              </div>
+            </>
+          ))}
         </div>
       </main>
     </div>
   );
 };
-
+export const getServerSideProps = async () => {
+  dbConnect();
+  const res = await axios.get(`http://localhost:3000/api/tenders`);
+  console.log(res.data);
+  return {
+    props: { data: res.data },
+  };
+};
 export default tender;

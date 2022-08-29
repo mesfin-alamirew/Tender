@@ -32,7 +32,10 @@ const Topbar = () => {
           </>
         ) : (
           <>
-            <div className={styles.subscribe}>Register</div>
+            <div className={styles.subscribe}>
+              {' '}
+              <Link href="/register">Register</Link>
+            </div>
             <div className={styles.login}>
               <Link href="/login">Login</Link>
             </div>

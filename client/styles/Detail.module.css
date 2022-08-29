@@ -1,0 +1,33 @@
+.container {
+}
+.title {
+  margin: 10px;
+  font-size: 18px;
+  font-weight: bold;
+}
+.overview {
+  margin-top: 20px;
+}
+.overviewText {
+  font-weight: bold;
+  font-size: 18px;
+}
+.overviewList {
+  list-style: none;
+  padding: 5px 10px;
+  line-height: 1.5;
+}
+.desc {
+  display: flex;
+  flex-direction: column;
+}
+.descHeading {
+  text-align: center;
+  line-height: 2;
+  font-size: 18px;
+  font-weight: bold;
+}
+.descBody {
+  margin-top: 20px;
+  line-height: 1.5;
+}
